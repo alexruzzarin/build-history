@@ -1,0 +1,24 @@
+{
+  "name": "build-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "slides": "mdx-deck slides.mdx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexruzzarin/build-history.git"
+  },
+  "author": "Alex Ruzzarin <alex@pager.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/alexruzzarin/build-history/issues"
+  },
+  "homepage": "https://github.com/alexruzzarin/build-history#readme",
+  "devDependencies": {
+    "mdx-deck": "^1.7.7",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1"
+  }
+}

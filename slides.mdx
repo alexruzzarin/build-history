@@ -1,0 +1,278 @@
+import { Head, Appear, Image, Notes } from 'mdx-deck'
+import { Split, FullScreenCode } from 'mdx-deck/layouts'
+import { CodeSurfer } from 'mdx-deck-code-surfer'
+import { dark } from 'mdx-deck/themes'
+import nightOwl from 'prism-react-renderer/themes/nightOwl'
+
+export { components } from 'mdx-deck-code-surfer'
+export const theme = {
+  ...dark,
+  codeSurfer: {
+    ...nightOwl,
+    showNumbers: false
+  }
+}
+
+<Head>
+  <title>A build history</title>
+</Head>
+
+<img src="./images/gears.gif" width="250px" />
+
+# A build history
+
+---
+
+# About me
+
+## no time for this.
+
+---
+
+In the beginning we had
+
+# <img src="./images/react.png" width="250px" /> and <img src="./images/webpack.png" width="250px" />
+
+---
+
+<CodeSurfer
+  title="webpack devDependencies"
+  code={require("!raw-loader!./snippets/webpack-dev-deps.mdx")}
+  lang="json"
+  showNumbers={false}
+  steps={[
+    {},
+    { lines: [4, 9, 14, 16, 18, 19]}
+  ]}
+/>
+
+---
+
+and we were happy
+
+# 😃
+
+---
+
+<Appear>
+  <p>But then</p>
+  <p>the second project starts</p>
+  <p>and the third</p>
+  <p>and the n-th</p>
+  <h2>and we need to keep everything updated</h2>
+</Appear>
+
+---
+
+<Image src="./images/updates.png" />
+
+<Notes>
+  or no
+</Notes>
+
+---
+
+export default Split
+
+<img src="./images/webpack-migrate.png" width="250px" />
+
+<Appear>
+  <p>we end with a dependency madness</p>
+  <p>plus the new version of `webpack`</p>
+  <p>👈 incompatible with the old one</p>
+  <p>multiplied by N projects</p>
+</Appear>
+
+---
+
+# 😰
+
+---
+
+export default Split
+
+# A new friend 😍
+![](images/cra-mantain.png)
+
+---
+
+# but we use `sass`!?!
+
+---
+
+and CRA doesn't support `sass`
+
+(yet)
+
+---
+
+`npm run eject`
+
+---
+
+<CodeSurfer
+  title="CRA eject"
+  code={require("!raw-loader!./snippets/cra-eject-package.mdx")}
+  lang="json"
+  showNumbers={true}
+  steps={[
+    {},
+    { range: [6, 53]}
+  ]}
+/>
+
+---
+
+and a brand new project using
+
+---
+
+<img src="images/vue.png" width="300px" />
+
+# Vue.js
+
+---
+
+with his own ~~`react-scripts`~~ `@vue/cli`!
+##### (that now is customizable)
+
+---
+
+## Another new best friend
+![](images/parcel.png)
+
+---
+
+## supports
+
+# <img src="./images/react.png" width="250px" /> and <img src="./images/vue.png" width="250px" />
+
+---
+
+<CodeSurfer
+  title="parcel package"
+  code={require("!raw-loader!./snippets/parcel-package.mdx")}
+  lang="json"
+  showNumbers={true}
+/>
+
+---
+
+![](images/fine.jpg)
+
+---
+
+## and then the company sign a contract with a new client!
+# 🤑🤑🤑🤑
+
+---
+
+# who asks us to have everything deployed in a custom environment
+
+---
+
+![](images/parcel-zero-config.png)
+
+---
+
+# let's fix it!
+### parcel plugins
+### almost no docs
+## too hard
+
+---
+
+# Alternatives?
+
+## `react-scripts-rewired`
+
+<Appear>
+  <p>customizable? ✅</p>
+  <p>vue?</p>
+</Appear>
+
+---
+
+# Alternatives?
+
+## `neutrino`
+
+<Appear>
+  <p>customizable? ✅</p>
+  <p>vue? ✅</p>
+  <p>lint? ✅</p>
+</Appear>
+
+---
+
+# Neutrino!
+![](images/party-parrot.gif)
+
+---
+
+and everything is fine again
+```json,
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build",
+    "lint": "neutrino lint",
+    "stylelint": "neutrino stylelint",
+  },
+  "devDependencies": {
+    "@pager/neutrino-preset-pager-vue": "0.5.2",
+    "neutrino": "8.3.0",
+    "node-sass": "4.9.4",
+    "sass-loader": "7.1.0"
+  }
+```
+
+---
+
+export default Split
+
+## until this:
+<Appear>
+  <img src="images/neutrino-build.png" width="100%" />
+</Appear>
+
+---
+
+<img src="images/give-up.gif" height="100%" />
+
+---
+
+NO!
+
+---
+
+> "Let's create our own build scripts!"
+
+---
+
+## That supports:
+
+- react
+- vue
+- less
+- sass
+- all the good parts of a `react-scripts`
+- our crazy deploy!
+
+---
+
+# Good news!
+
+## Lots of good examples to ~~copy~~ get inspired
+
+- https://github.com/facebook/create-react-app/tree/master/packages/react-scripts
+- https://github.com/neutrinojs/neutrino
+- https://github.com/kentcdodds/kcd-scripts
+- https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-service
+
+---
+
+CODE SAMPLE
+
+---
+
+# Thank you!
