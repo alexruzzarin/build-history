@@ -210,35 +210,28 @@ with its own ~~`react-scripts`~~ `@vue/cli`!
 
 ---
 
-and everything was fine again
-```json,
-  "scripts": {
-    "start": "neutrino start",
-    "build": "neutrino build",
-    "lint": "neutrino lint",
-    "stylelint": "neutrino stylelint",
-  },
-  "devDependencies": {
-    "@pager/neutrino-preset-pager-vue": "0.5.2",
-    "neutrino": "8.3.0",
-    "node-sass": "4.9.4",
-    "sass-loader": "7.1.0"
-  }
-```
+<CodeSurfer
+  title="and everything was fine again"
+  code={require("!raw-loader!./snippets/neutrino-package.mdx")}
+  lang="json"
+  showNumbers={false}
+  steps={[
+    {},
+    {range: [3,6]}
+  ]}
+/>
 
 ---
 
-# Even better!
-
-```js
-// .eslintrc.js
-
-const { Neutrino } = require('neutrino');
-
-module.exports = Neutrino({ root: __dirname })
-  .use('.neutrinorc.js')
-  .call('eslintrc');
-```
+<CodeSurfer
+  title="Even better!"
+  code={require("!raw-loader!./snippets/neutrino-eslintrc.mdx")}
+  lang="javascript"
+  showNumbers={false}
+  steps={[
+    {}
+  ]}
+/>
 
 ---
 
@@ -259,11 +252,7 @@ export default Split
 
 ---
 
-<img src="images/give-up.gif" height="100%" />
-
----
-
-NO!
+<Image src="images/give-up.gif" />
 
 ---
 
@@ -330,7 +319,7 @@ NO!
     {range: [8,21]},
     {range: [22,40]},
     {range: [24,32]},
-    {range: [22,40]},
+    {range: [24,40]},
     {}
   ]}
 />
@@ -345,7 +334,7 @@ NO!
   steps={[
     {},
     {lines: [15]},
-    {lines: [45]}
+    {lines: [45, 51]}
   ]}
 />
 
@@ -358,9 +347,14 @@ NO!
   showNumbers={false}
   steps={[
     {},
-    {range: [5,23]}
+    {range: [5,20]},
+    {range: [22,26]}
   ]}
 />
+
+---
+
+# It works?
 
 ---
 
